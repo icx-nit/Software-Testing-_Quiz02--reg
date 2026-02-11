@@ -1,1 +1,1 @@
-# Software-Testing-_Quiz02--reg
+# Software-Testing-_Quiz02
