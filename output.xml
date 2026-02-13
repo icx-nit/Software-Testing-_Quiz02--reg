@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.7 on win32)" generated="2026-02-13T17:10:37.810698" rpa="false" schemaversion="5">
+<suite id="s1" name="testRF02" source="C:\Users\ADMINS\Downloads\Software-Testing-_Quiz02-main (3)\Software-Testing-_Quiz02-main\testRF02.robot">
+<test id="s1-t1" name="Login via Office 365" line="11">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-13T17:10:37.977154" level="INFO">Opening browser 'chrome' to base url 'https://reg.up.ac.th'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-13T17:10:37.976855" elapsed="39.810025"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<msg time="2026-02-13T17:11:17.793482" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=144.0.7559.133)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7166cf3d5
+	0x7ff7166cf430
+	0x7ff7164710bd
+	0x7ff716447c22
+	0x7ff7164fd2a6
+	0x7ff716519652
+	0x7ff7164bcb0c
+	0x7ff7164bda53
+	0x7ff7169ab470
+	0x7ff7169a586d
+	0x7ff7169c621a
+	0x7ff7166eb235
+	0x7ff7166f3a5c
+	0x7ff7166d8844
+	0x7ff7166d89f6
+	0x7ff7166beb87
+	0x7ffdc0e2e8d7
+	0x7ffdc232c40c
+</msg>
+<msg time="2026-02-13T17:11:17.795191" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=144.0.7559.133)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7166cf3d5
+	0x7ff7166cf430
+	0x7ff7164710bd
+	0x7ff716447c22
+	0x7ff7164fd2a6
+	0x7ff716519652
+	0x7ff7164bcb0c
+	0x7ff7164bda53
+	0x7ff7169ab470
+	0x7ff7169a586d
+	0x7ff7169c621a
+	0x7ff7166eb235
+	0x7ff7166f3a5c
+	0x7ff7166d8844
+	0x7ff7166d89f6
+	0x7ff7166beb87
+	0x7ffdc0e2e8d7
+	0x7ffdc232c40c
+</msg>
+<doc>Maximizes current browser window.</doc>
+<status status="FAIL" start="2026-02-13T17:11:17.787738" elapsed="0.012495">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=144.0.7559.133)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7166cf3d5
+	0x7ff7166cf430
+	0x7ff7164710bd
+	0x7ff716447c22
+	0x7ff7164fd2a6
+	0x7ff716519652
+	0x7ff7164bcb0c
+	0x7ff7164bda53
+	0x7ff7169ab470
+	0x7ff7169a586d
+	0x7ff7169c621a
+	0x7ff7166eb235
+	0x7ff7166f3a5c
+	0x7ff7166d8844
+	0x7ff7166d89f6
+	0x7ff7166beb87
+	0x7ffdc0e2e8d7
+	0x7ffdc232c40c
+</status>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${cookie}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath://button[contains(., 'ยอมรับ')]</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2026-02-13T17:11:17.800842" elapsed="0.000086"/>
+</kw>
+<if>
+<branch type="IF" condition="${cookie}">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath://button[contains(., 'ยอมรับ')]</arg>
+<arg>END</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-13T17:11:17.801619" elapsed="0.000085"/>
+</kw>
+<status status="NOT RUN" start="2026-02-13T17:11:17.801370" elapsed="0.000433"/>
+</branch>
+<status status="NOT RUN" start="2026-02-13T17:11:17.801303" elapsed="0.000587"/>
+</if>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.js-show-header-dropdown</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-02-13T17:11:17.802276" elapsed="0.000055"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>css:.js-show-header-dropdown</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-13T17:11:17.802681" elapsed="0.000075"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.btn-grad</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-02-13T17:11:17.803239" elapsed="0.000082"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<arg>document.querySelector('.btn-grad').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" start="2026-02-13T17:11:17.803737" elapsed="0.000067"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:i0116</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-02-13T17:11:17.804100" elapsed="0.000044"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id:i0116</arg>
+<arg>${USER_EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-13T17:11:17.804433" elapsed="0.000061"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>id:idSIButton9</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-13T17:11:17.805237" elapsed="0.000110"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:i0118</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-02-13T17:11:17.805825" elapsed="0.000073"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-13T17:11:17.806237" elapsed="0.000070"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<arg>id:i0118</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-13T17:11:17.806622" elapsed="0.000062"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>id:idSIButton9</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-13T17:11:17.807047" elapsed="0.000047"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${is_mfa}</var>
+<arg>Wait Until Page Contains</arg>
+<arg>Approve sign in request</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2026-02-13T17:11:17.808248" elapsed="0.000208"/>
+</kw>
+<if>
+<branch type="IF" condition="${is_mfa}">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>MFA detected! Please approve on your phone...</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-02-13T17:11:17.810322" elapsed="0.000083"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-13T17:11:17.810661" elapsed="0.000063"/>
+</kw>
+<status status="NOT RUN" start="2026-02-13T17:11:17.810047" elapsed="0.000765"/>
+</branch>
+<status status="NOT RUN" start="2026-02-13T17:11:17.809933" elapsed="0.001039"/>
+</if>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${stay_in}</var>
+<arg>Wait Until Page Contains Element</arg>
+<arg>id:idSIButton9</arg>
+<arg>timeout=15s</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2026-02-13T17:11:17.811617" elapsed="0.000071"/>
+</kw>
+<if>
+<branch type="IF" condition="${stay_in}">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:idSIButton9</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-02-13T17:11:17.812696" elapsed="0.000480"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-13T17:11:17.813616" elapsed="0.000117"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<arg>document.querySelector('#idSIButton9').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" start="2026-02-13T17:11:17.814312" elapsed="0.000069"/>
+</kw>
+<status status="NOT RUN" start="2026-02-13T17:11:17.812232" elapsed="0.002227"/>
+</branch>
+<status status="NOT RUN" start="2026-02-13T17:11:17.812186" elapsed="0.002383"/>
+</if>
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<arg>reg.up.ac.th</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="NOT RUN" start="2026-02-13T17:11:17.815070" elapsed="0.000067"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>ออกจากระบบ</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2026-02-13T17:11:17.815560" elapsed="0.000065"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<arg>filename=login_success.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2026-02-13T17:11:17.816585" elapsed="0.000088"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Screenshot saved as login_success.png</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-02-13T17:11:17.817130" elapsed="0.000058"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-13T17:11:17.818012" elapsed="2.154591"/>
+</kw>
+<status status="FAIL" start="2026-02-13T17:10:37.976008" elapsed="41.996941">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=144.0.7559.133)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7166cf3d5
+	0x7ff7166cf430
+	0x7ff7164710bd
+	0x7ff716447c22
+	0x7ff7164fd2a6
+	0x7ff716519652
+	0x7ff7164bcb0c
+	0x7ff7164bda53
+	0x7ff7169ab470
+	0x7ff7169a586d
+	0x7ff7169c621a
+	0x7ff7166eb235
+	0x7ff7166f3a5c
+	0x7ff7166d8844
+	0x7ff7166d89f6
+	0x7ff7166beb87
+	0x7ffdc0e2e8d7
+	0x7ffdc232c40c
+</status>
+</test>
+<status status="FAIL" start="2026-02-13T17:10:37.811699" elapsed="42.162839"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="testRF02" id="s1" pass="0" fail="1" skip="0">testRF02</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-02-13T17:11:17.793482" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=144.0.7559.133)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7166cf3d5
+	0x7ff7166cf430
+	0x7ff7164710bd
+	0x7ff716447c22
+	0x7ff7164fd2a6
+	0x7ff716519652
+	0x7ff7164bcb0c
+	0x7ff7164bda53
+	0x7ff7169ab470
+	0x7ff7169a586d
+	0x7ff7169c621a
+	0x7ff7166eb235
+	0x7ff7166f3a5c
+	0x7ff7166d8844
+	0x7ff7166d89f6
+	0x7ff7166beb87
+	0x7ffdc0e2e8d7
+	0x7ffdc232c40c
+</msg>
+</errors>
+</robot>
